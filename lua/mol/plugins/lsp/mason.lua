@@ -16,6 +16,10 @@ return {
 
 		-- enable mason and configure icons
 		mason.setup({
+			ensure_installed = {
+				"clangd",
+				"clang-format",
+			},
 			ui = {
 				icons = {
 					package_installed = "✓",
@@ -29,6 +33,7 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"lua_ls",
+				"clangd",
 				"pyright",
 			},
 			-- auto-install configured servers (with lspconfig)
@@ -39,6 +44,7 @@ return {
 			-- list of formatters & linters for mason to install
 			ensure_installed = {
 				"stylua", -- lua formatter
+				"clang-format",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true,
