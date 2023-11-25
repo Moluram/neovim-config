@@ -25,3 +25,16 @@ opt.cursorline = true -- highlights the whole line where i am
 opt.termguicolors = true -- true colors 24bit support for the termnial
 opt.background = "dark" -- do i want overall dark or light
 opt.signcolumn = "yes" -- leaves a little bit of space on the left even when no signs exists for the line to not shift text when added
+
+-- backspace
+opt.backspace = "indent,eol,start" -- indent - allows removing indents, eol - allows to go to previous line, start - allows remove past the start of insert
+
+-- clipboard
+opt.clipboard:append("unnamedplus")-- global clipboard
+
+-- split windoes
+opt.splitright = true
+opt.splitbelow = true
+
+-- makes - part of the word, e.g. is-keystroek would be treated like a word
+opt.iskeyword:append("-")
